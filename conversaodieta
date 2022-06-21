@@ -1,0 +1,68 @@
+carboidratos = {'arroz': 100, 'aveia': 30, 'granola': 30, 'mandioca': 100,
+                'batata doce': 160,  'batata inglesa': 250, 'pure de batata': 150,
+                'macarrão integral': 85, 'pão integral': 50, 'milho de pipoca': 30,
+                'espiga de milho': 100, 'goma de tapioca': 30, 'cuscuz de milho': 80,
+                'pão francês': 50, 'macarrão comum': 85, 'torrada integral': 30}
+
+proteinas = {'peito de frango': 100, 'carne vermelha magra': 80, 'peixe magro': 100,
+             'salmão': 80, 'whey': 30, 'proteina vegetal': 30, 'albumina': 30,
+
+             'atum em lata': 120, 'bacalhau': 120, 'lombo de porco': 100, 'coxa de frango sem pele':100}
+gorduras = {'azeite extra virgem': 0.003, 'castanha de caju': 15, 'castanha do para': 15, 'pasta de amendoim': 15,
+            'abacate': 100, 'coco seco': 25, 'chocolate >70%': 25}
+
+frutas = {'banana nanica': 100, 'maçã': 100, 'maracujá': 150, 'pêra': 150, 'mamão papaia': 150,
+          'manga espada': 130, 'uva': 120, 'kiwi': 150, 'abacaxi': 150, 'melancia': 300, 'goiaba': 100,
+          'manga': 150, 'laranja': 100, 'tangerina': 130}
+
+queijos = {'cottage': 50, 'ricota': 30, 'queijo minas': 30, 'queijo muçarela light': 30, 'tofu': 100}
+
+leguminosas = {'feijao com caldo': 100, 'ervilha fresca': 100, 'grão de bico': 75, 'lentilha': 100}
+
+qual = int(input('\n[1] Carboidratos  [2] Proteínas [3] Gorduras  \n[4] Frutas'
+                 '  [5] Queijos   [6] Leguminosas   \nDigite o número para selecionar: '))
+
+if qual == 1:
+    alimento = input('\nQual o alimento da lista de Carboidratos? ').lower().strip()
+    quantidade = carboidratos.get(alimento)
+    quanto_come = int(input(f'Qual a quantidade de {alimento} na dieta? '))
+    outro_alimento = input('Quer comparar com qual alimento da lista? ').lower().strip()
+    outra_quantidade = carboidratos.get(outro_alimento)
+
+elif qual == 2:
+    alimento = input('\nQual o alimento da lista de Proteínas? ').lower().strip()
+    quantidade = proteinas.get(alimento)
+    quanto_come = int(input(f'Qual a quantidade de {alimento} na dieta? '))
+    outro_alimento = input('Quer comparar com qual alimento da lista? ').lower().strip()
+    outra_quantidade = proteinas.get(outro_alimento)
+
+elif qual == 3:
+    alimento = input('\nQual o alimento da lista de Gorduras? ').lower().strip()
+    quantidade = gorduras.get(alimento)
+    quanto_come = int(input(f'Qual a quantidade de {alimento} na dieta? '))
+    outro_alimento = input('Quer comparar com qual alimento da lista? ').lower().strip()
+    outra_quantidade = gorduras.get(outro_alimento)
+
+elif qual == 4:
+    alimento = input('\nQual o alimento da lista de Frutas? ').lower().strip()
+    quantidade = frutas.get(alimento)
+    quanto_come = int(input(f'Qual a quantidade de {alimento} na dieta? '))
+    outro_alimento = input('Quer comparar com qual alimento da lista? ').lower().strip()
+    outra_quantidade = frutas.get(outro_alimento)
+
+elif qual == 5:
+    alimento = input('\nQual o alimento da lista de Queijos? ').lower().strip()
+    quantidade = queijos.get(alimento)
+    quanto_come = int(input(f'Qual a quantidade de {alimento} na dieta? '))
+    outro_alimento = input('Quer comparar com qual alimento da lista? ').lower().strip()
+    outra_quantidade = queijos.get(outro_alimento)
+
+elif qual == 6:
+    alimento = input('\nQual o alimento da lista de Leguminosas? ').lower().strip()
+    quantidade = leguminosas.get(alimento)
+    quanto_come = int(input(f'Qual a quantidade de {alimento} na dieta? '))
+    outro_alimento = input('Quer comparar com qual alimento da lista? ').lower().strip()
+    outra_quantidade = leguminosas.get(outro_alimento)
+
+quanto_sera = (outra_quantidade * quanto_come) / quantidade
+print(f'\n{quanto_come}g de {alimento} equivale a {quanto_sera}g de {outro_alimento}.')
