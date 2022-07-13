@@ -1,2 +1,3 @@
 # dio-desafio-github
-Projeto sobre Git/Github
+
+Projetos do Santander Bootcamp Fullstack Developer (HTML, CSS, JavaScript, Java e Angular).
